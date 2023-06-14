@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="hrms.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="20"/>
+      </Unit>
+      <Unit>
+        <Filename Value="utamahrms.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="MenuHrms"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UtamaHrms"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="50"/>
+        <CursorPos X="25" Y="96"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="23">
+      <Position>
+        <Filename Value="utamahrms.pas"/>
+      </Position>
+      <Position>
+        <Filename Value="utamahrms.pas"/>
+        <Caret Line="34" Column="3"/>
+      </Position>
+      <Position>
+        <Filename Value="utamahrms.pas"/>
+        <Caret Line="35" Column="3"/>
+      </Position>
+      <Position>
+        <Filename Value="utamahrms.pas"/>
+        <Caret Line="36" Column="3" TopLine="2"/>
+      </Position>
+      <Position>
+        <Filename Value="utamahrms.pas"/>
+        <Caret Line="31" Column="3"/>
+      </Position>
+      <Position>
+        <Filename Value="utamahrms.pas"/>
+        <Caret Line="32" Column="3"/>
+      </Position>
+      <Position>
+        <Filename Value="utamahrms.pas"/>
+        <Caret Line="34" Column="3"/>
+      </Position>
+      <Position>
+        <Filename Value="utamahrms.pas"/>
+        <Caret Line="35" Column="3"/>
+      </Position>
+      <Position>
+        <Filename Value="utamahrms.pas"/>
+        <Caret Line="34" Column="3"/>
+      </Position>
+      <Position>
+        <Filename Value="utamahrms.pas"/>
+        <Caret Line="33" Column="3"/>
+      </Position>
+      <Position>
+        <Filename Value="utamahrms.pas"/>
+        <Caret Line="8" Column="86"/>
+      </Position>
+      <Position>
+        <Filename Value="utamahrms.pas"/>
+        <Caret Line="9" Column="29"/>
+      </Position>
+      <Position>
+        <Filename Value="utamahrms.pas"/>
+        <Caret Line="39" TopLine="7"/>
+      </Position>
+      <Position>
+        <Filename Value="utamahrms.pas"/>
+        <Caret Line="37" Column="21" TopLine="27"/>
+      </Position>
+      <Position>
+        <Filename Value="utamahrms.pas"/>
+        <Caret Line="126" Column="5" TopLine="70"/>
+      </Position>
+      <Position>
+        <Filename Value="utamahrms.pas"/>
+        <Caret Line="127" Column="12" TopLine="106"/>
+      </Position>
+      <Position>
+        <Filename Value="utamahrms.pas"/>
+        <Caret Line="69" Column="35" TopLine="52"/>
+      </Position>
+      <Position>
+        <Filename Value="utamahrms.pas"/>
+        <Caret Line="127" Column="5" TopLine="110"/>
+      </Position>
+      <Position>
+        <Filename Value="utamahrms.pas"/>
+        <Caret Line="97" Column="23" TopLine="84"/>
+      </Position>
+      <Position>
+        <Filename Value="utamahrms.pas"/>
+        <Caret Line="127" TopLine="113"/>
+      </Position>
+      <Position>
+        <Filename Value="utamahrms.pas"/>
+        <Caret Line="144" TopLine="124"/>
+      </Position>
+      <Position>
+        <Filename Value="utamahrms.pas"/>
+        <Caret Line="102" TopLine="79"/>
+      </Position>
+      <Position>
+        <Filename Value="utamahrms.pas"/>
+        <Caret Line="101" TopLine="78"/>
+      </Position>
+      <Position>
+        <Filename Value="utamahrms.pas"/>
+        <Caret Line="98" Column="7" TopLine="81"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+  <Debugging>
+    <BreakPoints>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="utamahrms.pas"/>
+        <Line Value="14"/>
+      </Item>
+    </BreakPoints>
+  </Debugging>
+</CONFIG>

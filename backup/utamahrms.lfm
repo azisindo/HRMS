@@ -1,0 +1,65 @@
+object MenuHrms: TMenuHrms
+  Left = 3130
+  Height = 959
+  Top = 37
+  Width = 1455
+  Caption = 'MenuHrms'
+  ClientHeight = 959
+  ClientWidth = 1455
+  DefaultMonitor = dmMainForm
+  DesignTimePPI = 144
+  OnCreate = FormCreate
+  object MenuScrollBox: TScrollBox
+    Left = 0
+    Height = 848
+    Top = 75
+    Width = 276
+    HorzScrollBar.Page = 1
+    VertScrollBar.Page = 1
+    Align = alLeft
+    Color = 10377728
+    ParentColor = False
+    TabOrder = 0
+  end
+  object PanelAtas: TPanel
+    Left = 0
+    Height = 75
+    Top = 0
+    Width = 1455
+    Align = alTop
+    BevelOuter = bvNone
+    Caption = 'PanelAtas'
+    Color = 4210688
+    ParentColor = False
+    TabOrder = 1
+  end
+  object StatusBar: TStatusBar
+    Left = 0
+    Height = 36
+    Top = 923
+    Width = 1455
+    Color = 4210688
+    Panels = <>
+    ParentColor = False
+  end
+  object UtamaFormsScb: TScrollBox
+    Left = 276
+    Height = 848
+    Top = 75
+    Width = 1179
+    HorzScrollBar.Page = 300
+    VertScrollBar.Page = 300
+    Align = alClient
+    ClientHeight = 844
+    ClientWidth = 1175
+    TabOrder = 3
+    object PGC1: TPageControl
+      Left = 0
+      Height = 844
+      Top = 0
+      Width = 1175
+      Align = alClient
+      TabOrder = 0
+    end
+  end
+end
