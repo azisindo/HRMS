@@ -30,5 +30,25 @@ ON t1.msf_id = t2.msf_parent_id
 WHERE t2.msf_parent_id IS not NULL
 group by t1.msf_id;
 
-create table ms_person_forms(mpf_id varchar(12),mpf_msf_id int );
+drop table ms_person_forms;
 
+create table ms_person_forms(mpf_mp_id varchar(12),mpf_msf_id int );
+
+insert into ms_person_forms values('14110946',1),
+								  ('14110946',2),
+                                  ('14110946',3),
+                                  ('14110946',4),
+                                  ('14110946',5),
+                                  ('14110946',6),
+                                  ('14110946',7),
+                                  ('14110946',8),
+                                  ('14110946',9),
+                                  ('14110946',10),
+                                  ('14110946',11),
+                                  ('14110946',12);
+
+select * FROM ms_person_forms;
+
+create table ms_person(mp_id varchar(12),mp_aktif varchar(1), mp_uu_id varchar(4));
+
+insert into ms_person values('14110946','T','KZ01');
