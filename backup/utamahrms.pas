@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, ComCtrls,StdCtrls,
-  CSSCtrls,cssbase ;
+  CSSCtrls,cssbase,uConnect,ZDataset, DB ;
 type
   TMyFormClass=Class of TForm;
   TMyTabSheet= Class(TTabSheet)
@@ -68,16 +68,17 @@ procedure TMenuHrms.FormCreate(Sender: TObject);
       Item.Parent := MenuScrollBox;
     end;
 
-  procedure AddItem(AName: String; AIcon: String);
+  procedure AddItem(AName: String; AIcon: String; msfid: String);
     var
       Item: TCSSShape;
-      Item2: TCSSShape;
-      x,
       header,
       container, node: THtmlNode;
       I: Integer;
+      Connect: TConnect;
+      Query: TZQuery;
 
     begin
+
       Item := TCSSShape.Create(Self);
       Item.Align := alTop;
       Item.AutoSize := True;
@@ -92,7 +93,7 @@ procedure TMenuHrms.FormCreate(Sender: TObject);
       header.AddNode( HTMLSpan('font:10px;color:white;padding:15px 10px; padding-right:0px;', AName));   // category caption
       header.AddNode( HTMLFa('font:15px;', 'f107'));                                          // drop down icon
 
-       header.AddNode( HTMLSpan('font:7px;font-weight:bold;margin-left:10px; padding:2px 5px; color:white; background-color:#47BAC1', 'New')) ;
+      header.AddNode( HTMLSpan('font:7px;font-weight:bold;margin-left:10px; padding:2px 5px; color:white; background-color:#47BAC1', 'New')) ;
 
       // some random badges for section
      { if MenuScrollBox.ControlCount mod 4 = 0 then header.AddNode( HTMLSpan('font:7px;font-weight:bold;margin-left:10px; padding:2px 5px; color:white; background-color:#47BAC1', 'New'))
@@ -103,21 +104,49 @@ procedure TMenuHrms.FormCreate(Sender: TObject);
       // sub items for section
       container := THtmlNode.Create('display:none');
       container.Id := 'container';
-        for I := 0 to Random(6) do  begin
+
+      Connect := TConnect.Create();
+      try
+        if Connect.Connect then
+        begin
+          Query := Connect.ExecuteQuery('select ms_descp from hrms.ms_forms where msf_parent_id='+QuotedStr(msfid));
+          if Query <> nil then
+          begin
+            Connect.DataSource.DataSet := Query;
+            while not Query.EOF do
+            begin
+               node := THtmlNode.Create('').SetHover('background-color:white;color:red');
+               //node.AddNode( HTMLSpan('color:rgb(173, 181, 189); padding:5px 0px 5px 50px;', 'Sub item ' + I.ToString));
+               node.AddNode( HTMLSpan('color:rgb(173, 181, 189); padding:5px 0px 5px 50px;',Query.FieldByName('ms_descp').AsString));
+               container.AddNode( node);
+               Query.Next;
+            end;
+          end;
+        end
+        else
+          ShowMessage(Connect.Logger);
+          Connect.Free;
+      finally
+        Connect.Free;
+      end;
+
+
+       { for I := 0 to Random(6) do  begin
           node := THtmlNode.Create('').SetHover('background-color:white;color:red');
-          if I=0 then
+         { if I=0 then
             node.Id:='Transaksi0';
           if I=1 then
             node.Id:='Transaksi1';
           if I=2 then
             node.Id:='Transaksi2';
           if I=3 then
-            node.id:='Transaksi3';
+            node.id:='Transaksi3';}
 
           //node.SetOnClick(@buka);
           node.AddNode( HTMLSpan('color:rgb(173, 181, 189); padding:5px 0px 5px 50px;', 'Sub item ' + I.ToString));
+
           container.AddNode( node);
-        end;
+        end;}
 
        Item.Body.AddNode( header);
 
@@ -127,8 +156,44 @@ procedure TMenuHrms.FormCreate(Sender: TObject);
       Item.Parent := MenuScrollBox;
       Item.Top :=  1000 + MenuScrollBox.ControlCount;
     end;
+
+var
+  Connect: TConnect;
+  Query: TZQuery;
+  DataSource:TDataSource;
+
 begin
-    AddLogo;
+  AddLogo;
+
+  Connect := TConnect.Create();
+  try
+    if Connect.Connect then
+    begin
+      Query := Connect.ExecuteQuery(' SELECT t1.msf_id id, t1.ms_descp descp,t1.msf_parent_id parent_id FROM' +
+                                    ' hrms.ms_forms AS t1 LEFT JOIN hrms.ms_forms as t2 '+
+                                    ' ON t1.msf_id = t2.msf_parent_id '+
+                                    ' WHERE t2.msf_parent_id IS not NULL'+
+                                    ' group by t1.msf_id');
+      if Query <> nil then
+      begin
+        // menggunakan TDataSource yang telah ditambahkan
+        Connect.DataSource.DataSet := Query;
+
+        while not Query.EOF do
+        begin
+           AddItem(Query.FieldByName('descp').AsString, 'f080',Query.FieldByName('id').AsString);
+           Query.Next;
+        end;
+      end;
+    end
+    else
+      ShowMessage(Connect.Logger);
+  finally
+    Connect.Free;
+  end;
+
+   { //sample
+
     AddItem('Dashboard', 'f080');
     AddItem('Pages','f0f6');
     AddItem('Auth', 'f084');
@@ -141,7 +206,7 @@ begin
     AddItem('Maps', 'f278');
     AddItem('Settings', 'f013');
     AddItem('Settings is soooo long how can we handle this under this html file', 'f013');
-
+    }
 end;
 
 

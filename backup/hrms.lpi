@@ -26,6 +26,9 @@
     </RunParams>
     <RequiredPackages>
       <Item>
+        <PackageName Value="zcomponent"/>
+      </Item>
+      <Item>
         <PackageName Value="csspckg_lazarus"/>
       </Item>
       <Item>
@@ -45,6 +48,11 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UtamaHrms"/>
       </Unit>
+      <Unit>
+        <Filename Value="..\..\LIB\uconnect.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uConnect"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -55,8 +63,12 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
+      <OtherUnitFiles Value="..\..\LIB"/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
+    <CodeGeneration>
+      <TargetOS Value="linux"/>
+    </CodeGeneration>
     <Linking>
       <Debugging>
         <DebugInfoType Value="dsDwarf3"/>

@@ -9,6 +9,7 @@ object MenuHrms: TMenuHrms
   DefaultMonitor = dmMainForm
   DesignTimePPI = 144
   OnCreate = FormCreate
+  Position = poDesktopCenter
   object MenuScrollBox: TScrollBox
     Left = 0
     Height = 848

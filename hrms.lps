@@ -8,11 +8,10 @@
       <Unit>
         <Filename Value="hrms.lpr"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="-1"/>
-        <WindowIndex Value="-1"/>
-        <TopLine Value="-1"/>
-        <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="20"/>
+        <EditorIndex Value="2"/>
+        <CursorPos Y="23"/>
+        <UsageCount Value="69"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="utamahrms.pas"/>
@@ -22,108 +21,161 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UtamaHrms"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="50"/>
-        <CursorPos X="25" Y="96"/>
-        <UsageCount Value="20"/>
+        <TopLine Value="101"/>
+        <CursorPos Y="126"/>
+        <UsageCount Value="69"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
+      <Unit>
+        <Filename Value="..\..\LIB\uconnect.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uConnect"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="115"/>
+        <CursorPos X="36" Y="190"/>
+        <UsageCount Value="69"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\fpcupdeluxe\lazarus\project\dev\ccr\zeos\src\component\ZAbstractConnection.pas"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="492"/>
+        <CursorPos Y="511"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\fpcupdeluxe\lazarus\project\dev\ccr\zeos\src\dbc\ZDbcMySql.pas"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="1258"/>
+        <CursorPos X="24" Y="1266"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
     </Units>
-    <JumpHistory HistoryIndex="23">
+    <JumpHistory HistoryIndex="29">
       <Position>
         <Filename Value="utamahrms.pas"/>
+        <Caret Line="144" Column="34" TopLine="131"/>
       </Position>
       <Position>
         <Filename Value="utamahrms.pas"/>
-        <Caret Line="34" Column="3"/>
+        <Caret Line="138" Column="78" TopLine="130"/>
       </Position>
       <Position>
         <Filename Value="utamahrms.pas"/>
-        <Caret Line="35" Column="3"/>
+        <Caret Line="151" Column="61" TopLine="128"/>
+      </Position>
+      <Position>
+        <Filename Value="hrms.lpr"/>
+        <Caret Line="12" Column="18"/>
       </Position>
       <Position>
         <Filename Value="utamahrms.pas"/>
-        <Caret Line="36" Column="3" TopLine="2"/>
+        <Caret Line="151" Column="16" TopLine="128"/>
+      </Position>
+      <Position>
+        <Filename Value="hrms.lpr"/>
+        <Caret Line="23"/>
       </Position>
       <Position>
         <Filename Value="utamahrms.pas"/>
-        <Caret Line="31" Column="3"/>
+        <Caret Line="109" Column="36" TopLine="37"/>
       </Position>
       <Position>
         <Filename Value="utamahrms.pas"/>
-        <Caret Line="32" Column="3"/>
+        <Caret Line="125" Column="137" TopLine="113"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\LIB\uconnect.pas"/>
+        <Caret Line="13" Column="14" TopLine="12"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\LIB\uconnect.pas"/>
+        <Caret Line="182" Column="65" TopLine="172"/>
       </Position>
       <Position>
         <Filename Value="utamahrms.pas"/>
-        <Caret Line="34" Column="3"/>
+        <Caret Line="129" Column="38" TopLine="102"/>
       </Position>
       <Position>
         <Filename Value="utamahrms.pas"/>
-        <Caret Line="35" Column="3"/>
+        <Caret Line="127" Column="15" TopLine="106"/>
       </Position>
       <Position>
         <Filename Value="utamahrms.pas"/>
-        <Caret Line="34" Column="3"/>
+        <Caret Line="128" Column="12" TopLine="113"/>
       </Position>
       <Position>
         <Filename Value="utamahrms.pas"/>
-        <Caret Line="33" Column="3"/>
+        <Caret Line="133" Column="9" TopLine="103"/>
       </Position>
       <Position>
         <Filename Value="utamahrms.pas"/>
-        <Caret Line="8" Column="86"/>
+        <Caret Line="130" Column="9" TopLine="107"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\LIB\uconnect.pas"/>
+        <Caret Line="75" Column="35" TopLine="65"/>
       </Position>
       <Position>
         <Filename Value="utamahrms.pas"/>
-        <Caret Line="9" Column="29"/>
+        <Caret Line="131" Column="41" TopLine="104"/>
       </Position>
       <Position>
         <Filename Value="utamahrms.pas"/>
-        <Caret Line="39" TopLine="7"/>
+        <Caret Line="132" Column="15" TopLine="117"/>
       </Position>
       <Position>
         <Filename Value="utamahrms.pas"/>
-        <Caret Line="37" Column="21" TopLine="27"/>
+        <Caret Line="110" Column="7" TopLine="101"/>
       </Position>
       <Position>
         <Filename Value="utamahrms.pas"/>
-        <Caret Line="126" Column="5" TopLine="70"/>
+        <Caret Line="108" Column="41"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\LIB\uconnect.pas"/>
+        <Caret Line="79" Column="20" TopLine="70"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\LIB\uconnect.pas"/>
+        <Caret Line="76" Column="25" TopLine="68"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\LIB\uconnect.pas"/>
+        <Caret Line="57" Column="4" TopLine="47"/>
       </Position>
       <Position>
         <Filename Value="utamahrms.pas"/>
-        <Caret Line="127" Column="12" TopLine="106"/>
+        <Caret Line="82" Column="22" TopLine="71"/>
       </Position>
       <Position>
         <Filename Value="utamahrms.pas"/>
-        <Caret Line="69" Column="35" TopLine="52"/>
+        <Caret Line="9" Column="24"/>
       </Position>
       <Position>
         <Filename Value="utamahrms.pas"/>
-        <Caret Line="127" Column="5" TopLine="110"/>
+        <Caret Line="185" Column="30" TopLine="173"/>
       </Position>
       <Position>
         <Filename Value="utamahrms.pas"/>
-        <Caret Line="97" Column="23" TopLine="84"/>
+        <Caret Line="205" Column="30" TopLine="176"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\LIB\uconnect.pas"/>
+        <Caret Line="76" TopLine="68"/>
       </Position>
       <Position>
         <Filename Value="utamahrms.pas"/>
-        <Caret Line="127" TopLine="113"/>
+        <Caret Line="188" Column="73" TopLine="161"/>
       </Position>
       <Position>
         <Filename Value="utamahrms.pas"/>
-        <Caret Line="144" TopLine="124"/>
-      </Position>
-      <Position>
-        <Filename Value="utamahrms.pas"/>
-        <Caret Line="102" TopLine="79"/>
-      </Position>
-      <Position>
-        <Filename Value="utamahrms.pas"/>
-        <Caret Line="101" TopLine="78"/>
-      </Position>
-      <Position>
-        <Filename Value="utamahrms.pas"/>
-        <Caret Line="98" Column="7" TopLine="81"/>
+        <Caret Line="189" Column="85" TopLine="174"/>
       </Position>
     </JumpHistory>
     <RunParams>
@@ -131,15 +183,4 @@
       <Modes ActiveMode=""/>
     </RunParams>
   </ProjectSession>
-  <Debugging>
-    <BreakPoints>
-      <Item>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="utamahrms.pas"/>
-        <Line Value="14"/>
-      </Item>
-    </BreakPoints>
-  </Debugging>
 </CONFIG>
