@@ -10,7 +10,7 @@ uses
   athreads,
   {$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, UtamaHrms, uConnect, zcomponent;
+  Forms, UtamaHrms, uConnect, zcomponent, utransaksi;
 
 {$R *.res}
 

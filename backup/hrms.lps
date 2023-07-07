@@ -8,9 +8,9 @@
       <Unit>
         <Filename Value="hrms.lpr"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="2"/>
-        <CursorPos Y="23"/>
-        <UsageCount Value="69"/>
+        <EditorIndex Value="4"/>
+        <CursorPos Y="25"/>
+        <UsageCount Value="73"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -20,10 +20,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UtamaHrms"/>
-        <IsVisibleTab Value="True"/>
-        <TopLine Value="67"/>
-        <CursorPos X="121" Y="106"/>
-        <UsageCount Value="69"/>
+        <TopLine Value="223"/>
+        <CursorPos X="26" Y="231"/>
+        <UsageCount Value="73"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -31,116 +30,58 @@
         <Filename Value="..\..\LIB\uconnect.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="uConnect"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="5"/>
         <TopLine Value="115"/>
         <CursorPos X="36" Y="190"/>
-        <UsageCount Value="69"/>
+        <UsageCount Value="73"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
+        <Filename Value="utransaksi.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Transaksi"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="1"/>
+        <CursorPos X="12" Y="24"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
         <Filename Value="C:\fpcupdeluxe\lazarus\project\dev\ccr\zeos\src\component\ZAbstractConnection.pas"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="6"/>
         <TopLine Value="492"/>
         <CursorPos Y="511"/>
-        <UsageCount Value="11"/>
+        <UsageCount Value="13"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
         <Filename Value="C:\fpcupdeluxe\lazarus\project\dev\ccr\zeos\src\dbc\ZDbcMySql.pas"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="3"/>
         <TopLine Value="1258"/>
         <CursorPos X="24" Y="1266"/>
-        <UsageCount Value="11"/>
+        <UsageCount Value="13"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
+      <Unit>
+        <Filename Value="unit1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit1"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="6"/>
+        <CursorPos X="9" Y="14"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="utamahrms.pas"/>
-        <Caret Line="144" Column="34" TopLine="131"/>
-      </Position>
-      <Position>
-        <Filename Value="utamahrms.pas"/>
-        <Caret Line="138" Column="78" TopLine="130"/>
-      </Position>
-      <Position>
-        <Filename Value="utamahrms.pas"/>
-        <Caret Line="151" Column="61" TopLine="128"/>
-      </Position>
-      <Position>
-        <Filename Value="hrms.lpr"/>
-        <Caret Line="12" Column="18"/>
-      </Position>
-      <Position>
-        <Filename Value="utamahrms.pas"/>
-        <Caret Line="151" Column="16" TopLine="128"/>
-      </Position>
-      <Position>
-        <Filename Value="hrms.lpr"/>
-        <Caret Line="23"/>
-      </Position>
-      <Position>
-        <Filename Value="utamahrms.pas"/>
-        <Caret Line="109" Column="36" TopLine="37"/>
-      </Position>
-      <Position>
-        <Filename Value="utamahrms.pas"/>
-        <Caret Line="125" Column="137" TopLine="113"/>
-      </Position>
-      <Position>
-        <Filename Value="..\..\LIB\uconnect.pas"/>
-        <Caret Line="13" Column="14" TopLine="12"/>
-      </Position>
-      <Position>
-        <Filename Value="..\..\LIB\uconnect.pas"/>
-        <Caret Line="182" Column="65" TopLine="172"/>
-      </Position>
-      <Position>
-        <Filename Value="utamahrms.pas"/>
-        <Caret Line="129" Column="38" TopLine="102"/>
-      </Position>
-      <Position>
-        <Filename Value="utamahrms.pas"/>
-        <Caret Line="127" Column="15" TopLine="106"/>
-      </Position>
-      <Position>
-        <Filename Value="utamahrms.pas"/>
-        <Caret Line="128" Column="12" TopLine="113"/>
-      </Position>
-      <Position>
-        <Filename Value="utamahrms.pas"/>
-        <Caret Line="133" Column="9" TopLine="103"/>
-      </Position>
-      <Position>
-        <Filename Value="utamahrms.pas"/>
-        <Caret Line="130" Column="9" TopLine="107"/>
-      </Position>
-      <Position>
-        <Filename Value="..\..\LIB\uconnect.pas"/>
-        <Caret Line="75" Column="35" TopLine="65"/>
-      </Position>
-      <Position>
-        <Filename Value="utamahrms.pas"/>
-        <Caret Line="131" Column="41" TopLine="104"/>
-      </Position>
-      <Position>
-        <Filename Value="utamahrms.pas"/>
-        <Caret Line="132" Column="15" TopLine="117"/>
-      </Position>
-      <Position>
-        <Filename Value="utamahrms.pas"/>
-        <Caret Line="110" Column="7" TopLine="101"/>
-      </Position>
-      <Position>
-        <Filename Value="utamahrms.pas"/>
-        <Caret Line="108" Column="41"/>
-      </Position>
-      <Position>
-        <Filename Value="..\..\LIB\uconnect.pas"/>
-        <Caret Line="79" Column="20" TopLine="70"/>
-      </Position>
       <Position>
         <Filename Value="..\..\LIB\uconnect.pas"/>
         <Caret Line="76" Column="25" TopLine="68"/>
@@ -176,6 +117,89 @@
       <Position>
         <Filename Value="utamahrms.pas"/>
         <Caret Line="189" Column="85" TopLine="174"/>
+      </Position>
+      <Position>
+        <Filename Value="utamahrms.pas"/>
+        <Caret Line="116" TopLine="106"/>
+      </Position>
+      <Position>
+        <Filename Value="utamahrms.pas"/>
+        <Caret Line="125" TopLine="108"/>
+      </Position>
+      <Position>
+        <Filename Value="utamahrms.pas"/>
+        <Caret Line="120" Column="68" TopLine="97"/>
+      </Position>
+      <Position>
+        <Filename Value="utamahrms.pas"/>
+        <Caret Line="40" Column="14" TopLine="27"/>
+      </Position>
+      <Position>
+        <Filename Value="utamahrms.pas"/>
+        <Caret Line="46" TopLine="31"/>
+      </Position>
+      <Position>
+        <Filename Value="utamahrms.pas"/>
+        <Caret Line="268" Column="8" TopLine="197"/>
+      </Position>
+      <Position>
+        <Filename Value="utamahrms.pas"/>
+        <Caret Line="221" Column="42" TopLine="199"/>
+      </Position>
+      <Position>
+        <Filename Value="utamahrms.pas"/>
+        <Caret Line="223" Column="3" TopLine="209"/>
+      </Position>
+      <Position>
+        <Filename Value="utamahrms.pas"/>
+        <Caret Line="230" TopLine="211"/>
+      </Position>
+      <Position>
+        <Filename Value="utamahrms.pas"/>
+        <Caret Line="232" Column="16" TopLine="218"/>
+      </Position>
+      <Position>
+        <Filename Value="utransaksi.pas"/>
+        <Caret Line="11" Column="27"/>
+      </Position>
+      <Position>
+        <Filename Value="utamahrms.pas"/>
+        <Caret Line="57" Column="16" TopLine="49"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+      </Position>
+      <Position>
+        <Filename Value="utamahrms.pas"/>
+        <Caret Line="235" Column="7" TopLine="221"/>
+      </Position>
+      <Position>
+        <Filename Value="utamahrms.pas"/>
+        <Caret Line="231" Column="5" TopLine="218"/>
+      </Position>
+      <Position>
+        <Filename Value="utransaksi.pas"/>
+        <Caret Line="19" Column="12" TopLine="2"/>
+      </Position>
+      <Position>
+        <Filename Value="utransaksi.pas"/>
+        <Caret Line="23" Column="12" TopLine="3"/>
+      </Position>
+      <Position>
+        <Filename Value="utransaksi.pas"/>
+        <Caret Line="22" Column="12" TopLine="3"/>
+      </Position>
+      <Position>
+        <Filename Value="utransaksi.pas"/>
+        <Caret Line="23" Column="12" TopLine="3"/>
+      </Position>
+      <Position>
+        <Filename Value="utransaksi.pas"/>
+        <Caret Line="24" Column="12" TopLine="4"/>
+      </Position>
+      <Position>
+        <Filename Value="utransaksi.pas"/>
+        <Caret Line="23" Column="12" TopLine="4"/>
       </Position>
     </JumpHistory>
     <RunParams>

@@ -1,0 +1,8 @@
+object Transaksi: TTransaksi
+  Left = 3130
+  Height = 240
+  Top = 38
+  Width = 320
+  Caption = 'Transaksi'
+  DesignTimePPI = 144
+end

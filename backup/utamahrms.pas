@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, ComCtrls,StdCtrls,
-  CSSCtrls,cssbase,uConnect,ZDataset, DB ;
+  CSSCtrls,cssbase,uConnect,ZDataset, DB,TypInfo  ;
 type
   TMyFormClass=Class of TForm;
   TMyTabSheet= Class(TTabSheet)
@@ -34,8 +34,16 @@ type
     procedure FormCreate(Sender: TObject);
 
     procedure OnItemClick(Sender: TObject);
-
+    procedure buka(Sender: TObject);
   private
+  //membuat tab baru pada page control
+  function BuatTab(FormClass:TMyFormClass): TMyTabSheet;
+
+  //menampilkan form yang page page control
+  procedure TampilForm(NewFormClass: TMyFormClass; ImgIndex: Integer);
+
+  //cek apakah form sudah ditampilkan pada page control
+  function CekFormSudahAda(FormClass:TMyFormClass): TMyTabSheet;
 
   public
 
@@ -45,6 +53,8 @@ var
   MenuHrms: TMenuHrms;
 
 implementation
+uses
+   utransaksi , Unit1;
 
 {$R *.lfm}
 
@@ -112,11 +122,15 @@ procedure TMenuHrms.FormCreate(Sender: TObject);
           Query := Connect.ExecuteQuery('select ms_descp from hrms.ms_forms where msf_parent_id='+QuotedStr(msfid));
           if Query <> nil then
           begin
+            // menggunakan TDataSource yang telah ditambahkan
             Connect.DataSource.DataSet := Query;
+                                                                          //    Query.FieldByName('descp').AsString
             while not Query.EOF do
             begin
-               node := THtmlNode.Create('').SetHover('background-color:white;color:red');
+               node   := THtmlNode.Create('').SetHover('background-color:white;color:red');
+               node.id:= Query.FieldByName('ms_descp').AsString;
                //node.AddNode( HTMLSpan('color:rgb(173, 181, 189); padding:5px 0px 5px 50px;', 'Sub item ' + I.ToString));
+               node.SetOnClick(@buka);
                node.AddNode( HTMLSpan('color:rgb(173, 181, 189); padding:5px 0px 5px 50px;',Query.FieldByName('ms_descp').AsString));
                container.AddNode( node);
                Query.Next;
@@ -125,34 +139,14 @@ procedure TMenuHrms.FormCreate(Sender: TObject);
         end
         else
           ShowMessage(Connect.Logger);
-          Connect.Free;
       finally
         Connect.Free;
       end;
 
+      Item.Body.AddNode( header);
+      Item.Body.AddNode( container);
 
-       { for I := 0 to Random(6) do  begin
-          node := THtmlNode.Create('').SetHover('background-color:white;color:red');
-         { if I=0 then
-            node.Id:='Transaksi0';
-          if I=1 then
-            node.Id:='Transaksi1';
-          if I=2 then
-            node.Id:='Transaksi2';
-          if I=3 then
-            node.id:='Transaksi3';}
-
-          //node.SetOnClick(@buka);
-          node.AddNode( HTMLSpan('color:rgb(173, 181, 189); padding:5px 0px 5px 50px;', 'Sub item ' + I.ToString));
-
-          container.AddNode( node);
-        end;}
-
-       Item.Body.AddNode( header);
-
-       Item.Body.AddNode( container);
-
-       Item.Changed;
+      Item.Changed;
       Item.Parent := MenuScrollBox;
       Item.Top :=  1000 + MenuScrollBox.ControlCount;
     end;
@@ -191,22 +185,6 @@ begin
   finally
     Connect.Free;
   end;
-
-   { //sample
-
-    AddItem('Dashboard', 'f080');
-    AddItem('Pages','f0f6');
-    AddItem('Auth', 'f084');
-    AddItem('Layouts', 'f26c');
-    AddItem('Forms', 'f2d2');
-    AddItem('Icons', 'f08a');
-    AddItem('Tables', 'f0ce');
-    AddItem('Buttons', 'f0ca');
-    AddItem('Calendar', 'f073');
-    AddItem('Maps', 'f278');
-    AddItem('Settings', 'f013');
-    AddItem('Settings is soooo long how can we handle this under this html file', 'f013');
-    }
 end;
 
 
@@ -235,6 +213,85 @@ begin
 
   Node.Style.Display := Node.CompStyle.Display;   // change "default" style (after no more :hover)
   TCSSShape(Node.RootNode.ParentControl).Changed; // relayout and repaint
+end;
+
+procedure TMenuHrms.buka(Sender: TObject);
+
+var
+  html:THtmlNode;
+begin
+
+  if sender is THtmlNode then
+    begin
+      html := THtmlNode(Sender);
+      //ShowMessage('masuk sini  -> : '+html.Id);
+      if html.Id='Master Forms' then
+        TampilForm(TTransaksi,0);
+      if html.Id='Master Forms' then
+        TampilForm(TTransaksi,0);
+
+    end
+end;
+
+function TMenuHrms.BuatTab(FormClass: TMyFormClass): TMyTabSheet;
+Var H:TMyTabSheet;
+begin
+  {fungsi digunakan untuk membuat tabsheet baru, kemudian tab tersebut 'ditancapkan'
+   pada page control yang diinginkan, dan otomatis menjadikannya sebagai tab yang aktif
+   saat itu}
+  Result:=Nil;
+  if Assigned(CekFormSudahAda(FormClass)) then Exit;
+  H:=TMyTabSheet.New(Self,FormClass);
+  H.PageControl:=PGC1;
+  H.TabForm:=H.FormClass.Create(Application);
+  H.TabForm.BorderStyle:=bsNone;
+  H.Caption:=H.TabForm.Caption;
+  H.TabForm.Parent:=H;
+  H.TabForm.Align:=AlClient;
+  PGC1.ActivePageIndex:=PGC1.PageCount - 1;
+  H.TabForm.Show;
+  Result:=H;
+end;
+
+procedure TMenuHrms.TampilForm(NewFormClass: TMyFormClass; ImgIndex: Integer);
+var tab: TTabSheet;
+begin
+  {jika form sudah ada / ditampilkan dalam tab, maka tab tersebut diaktifkan
+  (dijadikan tab aktif. Jika Form belum ada, maka tab baru dibuat, dan form yang
+  dimaksudkan diletakkan di tab tersebut}
+  if Assigned(CekFormSudahAda(NewFormClass)) then
+    pgc1.ActivePageIndex:=CekFormSudahAda(NewFormClass).TabIndex
+  else begin
+    Tab:=BuatTab(NewFormClass);
+    if Assigned(Tab) then
+       Tab.ImageIndex:=ImgIndex;
+  end;
+
+end;
+
+function TMenuHrms.CekFormSudahAda(FormClass: TMyFormClass): TMyTabSheet;
+var i: Integer;
+    H:TMyTabSheet;
+begin
+  {nilai awal result adalah nil. Jika tab yang mengandung form
+   ditemukan, maka fungsi ini akan mengembalikan referensi dari
+   tab tersebut. jika tidak ada maka fungsi mengembalikan nilai
+   nil. Penting untuk memberikan nilai awal nil, karena jika
+   tidak, fungsi Assigned(CekFormSudahAda) akan selalu
+   mengembalikan nilai True, baik form tersebut sudah ada
+   atau tidak.}
+  Result:= nil;
+  if PGC1.PageCount<1 then Exit;
+
+
+  {cek berdasar caption tab}
+  H:=Nil;
+  for i := 0 to pgc1.PageCount-1 do
+    if TMyTabSheet(PGC1.Pages[i]).FormClass=FormClass then begin
+       H:=TMyTabSheet(PGC1.Pages[i]);
+       Break;
+    end;
+  Result:=H;
 end;
 
 end.
