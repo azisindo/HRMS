@@ -5,7 +5,7 @@ unit Unit1;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls,ComCtrls;
 
 type
 
@@ -13,6 +13,7 @@ type
 
   TForm1 = class(TForm)
     Button1: TButton;
+    procedure Button1Click(Sender: TObject);
   private
 
   public
@@ -25,6 +26,21 @@ var
 implementation
 
 {$R *.lfm}
+
+{ TForm1 }
+
+procedure TForm1.Button1Click(Sender: TObject);
+var
+  TabSheet: TTabSheet;
+begin
+  TabSheet := Parent as TTabSheet;
+
+  if TabSheet <> nil then
+  begin
+    TabSheet.Free;
+  end;
+
+  end;
 
 end.
 

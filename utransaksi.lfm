@@ -15,4 +15,13 @@ object Transaksi: TTransaksi
     TextFont = 'default'
     Caption = 'BCMaterialDesignButton1'
   end
+  object BcClose: TBCMaterialDesignButton
+    Left = 284
+    Height = 50
+    Top = 60
+    Width = 185
+    TextFont = 'default'
+    Caption = 'Exit'
+    OnClick = BcCloseClick
+  end
 end

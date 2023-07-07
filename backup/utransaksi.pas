@@ -5,10 +5,16 @@ unit utransaksi;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls,
+  BCImageButton, BCMaterialDesignButton,ComCtrls;
 
 type
+
+  { TTransaksi }
+
   TTransaksi = class(TForm)
+    BcClose: TBCMaterialDesignButton;
+    BCMaterialDesignButton1: TBCMaterialDesignButton;
   private
 
   public

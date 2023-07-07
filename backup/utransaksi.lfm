@@ -1,8 +1,26 @@
 object Transaksi: TTransaksi
   Left = 3130
-  Height = 240
+  Height = 405
   Top = 38
-  Width = 320
+  Width = 702
   Caption = 'Transaksi'
+  ClientHeight = 405
+  ClientWidth = 702
   DesignTimePPI = 144
+  object BCMaterialDesignButton1: TBCMaterialDesignButton
+    Left = 164
+    Height = 42
+    Top = 188
+    Width = 218
+    TextFont = 'default'
+    Caption = 'BCMaterialDesignButton1'
+  end
+  object BcClose: TBCMaterialDesignButton
+    Left = 284
+    Height = 50
+    Top = 60
+    Width = 185
+    TextFont = 'default'
+    Caption = 'Exit'
+  end
 end

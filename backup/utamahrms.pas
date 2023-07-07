@@ -26,10 +26,12 @@ type
   { TMenuHrms }
 
   TMenuHrms = class(TForm)
+    Panel1: TPanel;
     PanelAtas: TPanel;
     PGC1: TPageControl;
     MenuScrollBox: TScrollBox;
     StatusBar: TStatusBar;
+    TabSheet1: TTabSheet;
     UtamaFormsScb: TScrollBox;
     procedure FormCreate(Sender: TObject);
 
@@ -227,8 +229,8 @@ begin
       //ShowMessage('masuk sini  -> : '+html.Id);
       if html.Id='Master Forms' then
         TampilForm(TTransaksi,0);
-      if html.Id='Master Forms' then
-        TampilForm(TTransaksi,0);
+      if html.Id='Master User' then
+        TampilForm(TForm1,0);
 
     end
 end;

@@ -10,7 +10,7 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="4"/>
         <CursorPos Y="25"/>
-        <UsageCount Value="73"/>
+        <UsageCount Value="76"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -20,9 +20,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UtamaHrms"/>
-        <TopLine Value="223"/>
-        <CursorPos X="26" Y="231"/>
-        <UsageCount Value="73"/>
+        <TopLine Value="228"/>
+        <CursorPos X="29" Y="231"/>
+        <UsageCount Value="76"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -33,7 +33,7 @@
         <EditorIndex Value="5"/>
         <TopLine Value="115"/>
         <CursorPos X="36" Y="190"/>
-        <UsageCount Value="73"/>
+        <UsageCount Value="76"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -42,9 +42,24 @@
         <ComponentName Value="Transaksi"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <CursorPos X="12" Y="24"/>
-        <UsageCount Value="22"/>
+        <TopLine Value="25"/>
+        <CursorPos X="15" Y="39"/>
+        <UsageCount Value="25"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unit1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit1"/>
+        <EditorIndex Value="2"/>
+        <CursorPos X="9" Y="14"/>
+        <UsageCount Value="24"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -53,7 +68,7 @@
         <EditorIndex Value="6"/>
         <TopLine Value="492"/>
         <CursorPos Y="511"/>
-        <UsageCount Value="13"/>
+        <UsageCount Value="14"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
@@ -62,54 +77,12 @@
         <EditorIndex Value="3"/>
         <TopLine Value="1258"/>
         <CursorPos X="24" Y="1266"/>
-        <UsageCount Value="13"/>
+        <UsageCount Value="14"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
-      <Unit>
-        <Filename Value="unit1.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="Form1"/>
-        <ResourceBaseClass Value="Form"/>
-        <UnitName Value="Unit1"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="2"/>
-        <TopLine Value="6"/>
-        <CursorPos X="9" Y="14"/>
-        <UsageCount Value="21"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
-      </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="..\..\LIB\uconnect.pas"/>
-        <Caret Line="76" Column="25" TopLine="68"/>
-      </Position>
-      <Position>
-        <Filename Value="..\..\LIB\uconnect.pas"/>
-        <Caret Line="57" Column="4" TopLine="47"/>
-      </Position>
-      <Position>
-        <Filename Value="utamahrms.pas"/>
-        <Caret Line="82" Column="22" TopLine="71"/>
-      </Position>
-      <Position>
-        <Filename Value="utamahrms.pas"/>
-        <Caret Line="9" Column="24"/>
-      </Position>
-      <Position>
-        <Filename Value="utamahrms.pas"/>
-        <Caret Line="185" Column="30" TopLine="173"/>
-      </Position>
-      <Position>
-        <Filename Value="utamahrms.pas"/>
-        <Caret Line="205" Column="30" TopLine="176"/>
-      </Position>
-      <Position>
-        <Filename Value="..\..\LIB\uconnect.pas"/>
-        <Caret Line="76" TopLine="68"/>
-      </Position>
       <Position>
         <Filename Value="utamahrms.pas"/>
         <Caret Line="188" Column="73" TopLine="161"/>
@@ -200,6 +173,34 @@
       <Position>
         <Filename Value="utransaksi.pas"/>
         <Caret Line="23" Column="12" TopLine="4"/>
+      </Position>
+      <Position>
+        <Filename Value="utamahrms.pas"/>
+        <Caret Line="229" Column="51" TopLine="210"/>
+      </Position>
+      <Position>
+        <Filename Value="utamahrms.pas"/>
+        <Caret Line="230" Column="51" TopLine="211"/>
+      </Position>
+      <Position>
+        <Filename Value="utamahrms.pas"/>
+        <Caret Line="231" Column="51" TopLine="212"/>
+      </Position>
+      <Position>
+        <Filename Value="utamahrms.pas"/>
+        <Caret Line="230" Column="51" TopLine="211"/>
+      </Position>
+      <Position>
+        <Filename Value="utamahrms.pas"/>
+        <Caret Line="229" Column="51" TopLine="210"/>
+      </Position>
+      <Position>
+        <Filename Value="utransaksi.pas"/>
+        <Caret Line="25" Column="12" TopLine="5"/>
+      </Position>
+      <Position>
+        <Filename Value="utransaksi.pas"/>
+        <Caret Line="9" Column="49" TopLine="5"/>
       </Position>
     </JumpHistory>
     <RunParams>

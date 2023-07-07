@@ -1,10 +1,10 @@
 object Form1: TForm1
   Left = 292
-  Height = 240
+  Height = 419
   Top = 38
   Width = 733
   Caption = 'Form1'
-  ClientHeight = 240
+  ClientHeight = 419
   ClientWidth = 733
   DesignTimePPI = 144
   object Button1: TButton
